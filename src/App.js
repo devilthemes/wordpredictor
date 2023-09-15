@@ -7,10 +7,10 @@ import { Step3 } from "./components/Step3";
 import { Step4 } from "./components/Step4";
 import { Step5 } from "./components/Step5";
 function App() {
-  const [step, setStep] = useState(5);
+  const [step, setStep] = useState(1);
   const [wordCount, setWordCount] = useState(0);
   const [data, setData] = useState([]);
-  const [word,setWord] = useState("apple");
+  const [word,setWord] = useState("");
   const goStep3 = (obj) => {
     console.log(obj);
     setStep(obj.step);

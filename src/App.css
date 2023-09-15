@@ -1,8 +1,15 @@
+html,body{margin: 0; padding: 0; height: 100%;}
 .app {
   text-align: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
+  flex:1;
+  align-items: center;
 }
 .inputs{ display:flex; justify-content: center;}
 table th,table td {padding:10px;}
+#root { height:100%; display: flex;}
+.btn{height: 50px; padding: 0 20px; margin:5px  }
+.txtBox{padding:15px; margin:5px 3px;}
+.txtBox.single{width:20px}

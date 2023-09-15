@@ -162,7 +162,7 @@ export const Step3 = ({ onNext, count }) => {
             ))}
         </tbody>
       </table>
-      step:{step} / {collection.length}
+      
       {
         step<=collection.length &&  <h2>
         Type Column number on which your 
@@ -174,9 +174,11 @@ export const Step3 = ({ onNext, count }) => {
         {collection.map((item, index) => {
           return (
             <input
+            className="txtBox single"
               type="text"
               data-index={index}
               value={item}
+              maxLength={1}
               onChange={setletter}
               disabled={step < index + 1 && allFilled === false}
             />
@@ -184,7 +186,7 @@ export const Step3 = ({ onNext, count }) => {
         })}
       </div>
       <div>{msg}</div>
-      <button onClick={() => onNext({ step: 4, data: stepCollection })}>
+      <button className="btn" onClick={() => onNext({ step: 4, data: stepCollection })}>
         Next Step
       </button>
     </>

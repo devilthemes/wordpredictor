@@ -120,6 +120,7 @@ export const Step4 = ({ onNext, data }) => {
         {collection.map((item, index) => {
           return (
             <input
+            className="txtBox single"
               type="text"
               data-index={index}
               value={item}
@@ -130,7 +131,7 @@ export const Step4 = ({ onNext, data }) => {
         })}
       </div>
       <div>{msg}</div>
-      <button onClick={()=>onNext(word.join(""))} disabled={ allFilled === false}>Next Step</button>
+      <button class="btn" onClick={()=>onNext(word.join(""))} disabled={ allFilled === false}>Next Step</button>
     </>
   );
 };
